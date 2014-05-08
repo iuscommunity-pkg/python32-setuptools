@@ -1,5 +1,5 @@
 %global pymajor 3
-%global pyminor 3
+%global pyminor 2
 %global pyver %{pymajor}.%{pyminor}
 %global iusver %{pymajor}%{pyminor}
 %global __python3 %{_bindir}/python%{pyver}
