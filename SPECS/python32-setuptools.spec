@@ -69,6 +69,9 @@ rm -rf %{buildroot}
 
 %changelog
 * Thu May 08 2014 Carl George <carl.george@rackspace.com> - 3.6-1.ius
+- Port from python33-setuptools
+
+* Thu May 08 2014 Carl George <carl.george@rackspace.com> - 3.6-1.ius
 - Latest upstream
 - Switch to global macros
 - Macro change: pyver to iusver
