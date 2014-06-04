@@ -8,7 +8,7 @@
 %global srcname setuptools
 
 Name:           python%{iusver}-%{srcname}
-Version:        3.6
+Version:        4.0.1
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -68,6 +68,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Jun 04 2014 Carl George <carl.george@rackspace.com> - 4.0.1-1.ius
+- Latest upstream
+
 * Thu May 08 2014 Carl George <carl.george@rackspace.com> - 3.6-1.ius
 - Port from python33-setuptools
 
