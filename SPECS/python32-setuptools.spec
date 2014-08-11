@@ -8,7 +8,7 @@
 %global srcname setuptools
 
 Name:           python%{iusver}-%{srcname}
-Version:        5.4.2
+Version:        5.5.1
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -47,17 +47,13 @@ CFLAGS="$RPM_OPT_FLAGS" %{__python3} setup.py build
 
 %install
 %{__python3} setup.py install --optimize 1 --skip-build --root %{buildroot}
-rm -rf %{buildroot}%{python3_sitelib}/setuptools/tests
-rm -f %{buildroot}%{_bindir}/easy_install
-install -p -m 0644 %{SOURCE1} %{SOURCE2} .
+%{__rm} -rf %{buildroot}%{python3_sitelib}/setuptools/tests
+%{__rm} -f %{buildroot}%{_bindir}/easy_install
+%{__install} -p -m 0644 %{SOURCE1} %{SOURCE2} .
 
 
 %check
 LC_CTYPE=en_US.utf8 %{__python3} setup.py test
-
-
-%clean
-rm -rf %{buildroot}
 
 
 %files
@@ -68,6 +64,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Aug 11 2014 Carl George <carl.george@rackspace.com> - 5.5.1-1.ius
+- Latest upstream
+
 * Mon Aug 04 2014 Ben Harper <ben.harper@rackspace.com> - 5.4.2-1.ius
 - Latest upstream
 
