@@ -8,7 +8,7 @@
 %global srcname setuptools
 
 Name:           python%{iusver}-%{srcname}
-Version:        8.2.1
+Version:        8.3
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -63,6 +63,9 @@ LC_CTYPE=en_US.utf8 %{__python3} setup.py test
 
 
 %changelog
+* Fri Dec 26 2014 Carl George <carl.george@rackspace.com> - 8.3-1.ius
+- Latest upstream
+
 * Mon Dec 22 2014 Carl George <carl.george@rackspace.com> - 8.2.1-1.ius
 - Latest upstream
 
