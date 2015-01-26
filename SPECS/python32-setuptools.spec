@@ -6,6 +6,7 @@
 %global python3_sitelib  %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
 %global python3_sitearch %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")
 %global srcname setuptools
+%global with_check 0
 
 Name:           python%{iusver}-%{srcname}
 Version:        11.3.1
@@ -25,6 +26,11 @@ Requires:       python%{iusver}
 # want to get rid of the Provides and just keep the Obsoletes
 Provides:       python%{iusver}-distribute = %{version}-%{release}
 Obsoletes:      python%{iusver}-distribute <= 0.6.49-2.ius%{?dist}
+%if 0%{?with_check}
+# we don't have IUS versions of these yet
+BuildRequires:  python%{iusver}-pytest
+BuildRequires:  python%{iusver}-mock
+%endif
 
 
 %description
@@ -52,10 +58,12 @@ CFLAGS="$RPM_OPT_FLAGS" %{__python3} setup.py build
 %{__install} -p -m 0644 %{SOURCE1} %{SOURCE2} .
 
 
-#%check
+%if 0%{?with_check}
+%check
 # Upstream has switched to 'setup.py ptr'.  We need to build
 # python%{iusver}-mock and python%{iusver}-pytest to enable this.
-#LC_CTYPE=en_US.utf8 %{__python3} setup.py ptr
+LC_CTYPE=en_US.utf8 %{__python3} setup.py ptr
+%endif
 
 
 %files
