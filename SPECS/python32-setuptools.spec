@@ -15,8 +15,8 @@ Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
 Group:          Applications/System
 License:        Python or ZPLv2.0
-URL:            http://pypi.python.org/pypi/%{srcname}
-Source0:        http://pypi.python.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
+URL:            https://pypi.python.org/pypi/%{srcname}
+Source0:        https://pypi.python.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
 Source1:        psfl.txt
 Source2:        zpl.txt
 BuildArch:      noarch
