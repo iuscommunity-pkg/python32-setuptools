@@ -9,7 +9,7 @@
 %global with_check 0
 
 Name:           python%{iusver}-%{srcname}
-Version:        19.4
+Version:        19.6.2
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -73,6 +73,9 @@ LC_CTYPE=en_US.utf8 %{__python3} setup.py ptr
 
 
 %changelog
+* Mon Feb 01 2016 Ben Harper <ben.harper@rackspace.com> - 19.6.2-1.ius
+- Latest upstream
+
 * Mon Jan 18 2016 Ben Harper <ben.harper@rackspace.com> - 19.4-1.ius
 - Latest upstream
 
