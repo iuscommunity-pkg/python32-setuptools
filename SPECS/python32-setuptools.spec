@@ -9,7 +9,7 @@
 %global with_check 0
 
 Name:           python%{iusver}-%{srcname}
-Version:        20.10.1
+Version:        21.2.2
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -73,6 +73,9 @@ LC_CTYPE=en_US.utf8 %{__python3} setup.py ptr
 
 
 %changelog
+* Thu Jun 02 2016 Carl George <carl.george@rackspace.com> - 21.2.2-1.ius
+- Latest upstream
+
 * Tue May 03 2016 Ben Harper <ben.harper@rackspace.com> - 20.10.1-1.ius
 - updating to 20.10.1
 - update Source0 url to pypi.io see
