@@ -9,7 +9,7 @@
 %global with_check 0
 
 Name:           python%{iusver}-%{srcname}
-Version:        27.3.1
+Version:        28.7.1
 Release:        1.ius%{?dist}
 Summary:        Easily build and distribute Python %{pyver} packages
 Vendor:         IUS Community Project
@@ -70,6 +70,9 @@ LC_CTYPE=en_US.utf8 %{__python3} setup.py ptr
 
 
 %changelog
+* Mon Nov 07 2016 Carl George <carl.george@rackspace.com> - 28.7.1-1.ius
+- Latest version
+
 * Mon Oct 03 2016 Carl George <carl.george@rackspace.com> - 27.3.1-1.ius
 - Latest upstream
 
